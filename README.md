@@ -1,77 +1,56 @@
-# E-commerce Product Recommendation System
+# Rank-Based Product Recommendation System
 
-This project is a machine learning-based product recommendation system that provides personalized product recommendations to users based on their browsing and purchase history. It utilizes collaborative filtering and content-based filtering algorithms to analyze user behavior and generate relevant recommendations. The goal is to enhance the overall shopping experience for users and increase sales for e-commerce businesses.
+## Project Overview
+
+This project simulates user interactions with products, generates datasets, and implements a rank-based recommendation system to suggest products to users based on their preferences and interactions.
+
+## Features
+
+- Generates synthetic datasets for users, products, and interactions.
+- Saves datasets in an Excel file with multiple sheets.
 
 ## Table of Contents
+
 - [Technologies Used](#technologies-used)
-- [Dataset](#dataset)
-- [Approach](#approach)
-  - [Rank Based Product Recommendation](#1-rank-based-product-recommendation)
-  - [Similarity-Based Collaborative Filtering](#2-similarity-based-collaborative-filtering)
-  - [Model-Based Collaborative Filtering](#3-model-based-collaborative-filtering)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+- [Data Generation](#data-generation)
+- [Author](#author)
 
 ## Technologies Used
-- Python
+
+- Python 3.x
 - Pandas
 - NumPy
-- Jupyter Notebook
-- Scikit-learn
-
-## Dataset
-The project utilizes an Amazon dataset on user ratings for electronic products. This dataset does not have any headers, and to avoid biases, each product and user is assigned a unique identifier instead of using their name or any other potentially biased information.
-
-- You can find the [dataset here](https://www.kaggle.com/datasets/vibivij/amazon-electronics-rating-datasetrecommendation/download?datasetVersionNumber=1).
-- Many other similar datasets can be found [here](https://jmcauley.ucsd.edu/data/amazon/).
-
-## Approach
-
-### 1) Rank Based Product Recommendation
-**Objective:**
-- Recommend products with the highest number of ratings.
-- Target new customers with the most popular products.
-- Solve the Cold Start Problem.
-
-**Outputs:**
-- Recommend top 5 products with a minimum of 50/100 ratings/interactions.
-
-**Approach:**
-- Calculate the average rating for each product.
-- Calculate the total number of ratings for each product.
-- Create a DataFrame using these values and sort it by average.
-- Write a function to get 'n' top products with the specified minimum number of interactions.
-
-### 2) Similarity-Based Collaborative Filtering
-**Objective:**
-- Provide personalized and relevant recommendations to users.
-
-**Outputs:**
-- Recommend top 5 products based on interactions of similar users.
-
-**Approach:**
-- Convert user_id to integer type for convenience.
-- Write a function to find similar users based on cosine similarity and extract their similarity scores.
-- Create a function to recommend products based on the similar users identified.
-
-### 3) Model-Based Collaborative Filtering
-**Objective:**
-- Provide personalized recommendations based on past behavior and preferences.
-
-**Outputs:**
-- Recommend top 5 products for a particular user.
-
-**Approach:**
-- Convert the ratings matrix to a CSR (Compressed Sparse Row) matrix to save memory and computational time.
-- Perform singular value decomposition (SVD) on the sparse matrix to reduce dimensionality.
-- Calculate the predicted ratings for all users using SVD.
-- Store the predicted ratings in a DataFrame and filter it to only include products that the user has not rated.
+- openpyxl (for Excel file handling)
 
 ## Installation
-To run the project, clone the repository and install the required packages:
 
-```bash
-git clone https://github.com/yourusername/ecommerce-product-recommendation-system.git
-cd ecommerce-product-recommendation-system
-pip install -r requirements.txt
+1. Clone this repository to your local machine:
+
+Navigate to the project directory:
+cd rank-based-recommendation-system
+
+Install the required libraries:
+pip install pandas numpy openpyxl
+
+Usage
+
+    Open the project in your preferred Python environment (e.g., Jupyter Notebook, VSCode).
+    Run the entire script to generate datasets and see product recommendations.
+    The generated datasets will be saved in rank_based_recommendation_data.xlsx.
+
+Data Generation
+
+The project generates the following datasets:
+
+    Users: Contains user IDs and their preferred product categories.
+    Products: Contains product IDs, categories, ratings, prices, and popularity counts.
+    Interactions: Simulates user interactions with products, including clicks and purchases.
+
+Author
+
+Ritwik Pandey
+ritwikp@umd.edu
+https://github.com/RitwikPandeyy
+
