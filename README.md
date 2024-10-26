@@ -1,6 +1,3 @@
-# ProductRecommendation
-A machine learning-based product recommendation system designed to enhance user shopping experiences by providing personalized product suggestions. 
-
 # E-commerce Product Recommendation System
 
 This project is a machine learning-based product recommendation system that provides personalized product recommendations to users based on their browsing and purchase history. It utilizes collaborative filtering and content-based filtering algorithms to analyze user behavior and generate relevant recommendations. The goal is to enhance the overall shopping experience for users and increase sales for e-commerce businesses.
