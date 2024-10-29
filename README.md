@@ -9,14 +9,6 @@ This project simulates user interactions with products, generates datasets, and 
 - Generates synthetic datasets for users, products, and interactions.
 - Saves datasets in an Excel file with multiple sheets.
 
-## Table of Contents
-
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Data Generation](#data-generation)
-- [Author](#author)
-
 ## Technologies Used
 
 - Python 3.x
